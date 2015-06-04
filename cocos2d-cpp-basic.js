@@ -10,7 +10,11 @@ mySprite->setPosition(Point((visibleSize.width / 2) + origin.x, (visibleSize.hei
 mySprite->setPosition(100, 100);
 this->addChild(mySprite);
 
-// 配置したNodeを移動させる
+// Nodeを指定位置に移動させる
+auto action = MoveTo::create(3, Point(visibleSize.width, visibleSize.height));
+mySprite->runAction(action);
+
+// Nodeを指定座標分移動させる
 auto action = MoveBy::create(3, Point(visibleSize.width, visibleSize.height));
 mySprite->runAction(action);
 
